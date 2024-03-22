@@ -36,7 +36,7 @@ body {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background-image: linear-gradient(to bottom,#86E57F,#86E57F 80%,#FAED7D 80%);
 
   /* Center slide text vertically */
   display: flex !important;
