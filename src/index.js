@@ -14,6 +14,7 @@ import 'swiper/css/navigation';
 // import required modules
 import { Navigation } from 'swiper/modules';
 import { Room1 } from './module/Room1';
+import { Room2 } from './module/Room2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,7 +25,7 @@ root.render(
   allowTouchMove={false}
   className="mySwiper">
     <SwiperSlide><Room1/></SwiperSlide>
-    <SwiperSlide>Slide 2</SwiperSlide>
+    <SwiperSlide><Room2/></SwiperSlide>
     <SwiperSlide>Slide 3</SwiperSlide>
     <SwiperSlide>Slide 4</SwiperSlide>
   </Swiper>
