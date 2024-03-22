@@ -14,6 +14,11 @@ import 'swiper/css/navigation';
 // import required modules
 import { Navigation } from 'swiper/modules';
 import { Room1 } from './module/Room1';
+window.addEventListener('popstate', function(event) {
+  if (confirm("앱을 종료하시겠습니까?")) {
+    window.close(); // 창 닫기
+  }
+});
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Swiper

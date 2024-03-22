@@ -30,13 +30,7 @@
         navigator.serviceWorker.register('sw.js')
       }
     </script>
-    <script>
-      window.addEventListener('popstate', function(event) {
-        if (confirm("앱을 종료하시겠습니까?")) {
-          window.close(); // 창 닫기
-        }
-      });
-    </script>
+    
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
