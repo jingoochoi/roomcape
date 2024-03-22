@@ -1,0 +1,2 @@
+.door{width: 250px;height: 70vh;background-color: #CC723D;position: relative;}
+.hand{width: 30px;height: 30px;background-color: #ccc;border-radius: 50%;top: 50%;position: absolute;left: 30px;transform: translateY(-50%);}
