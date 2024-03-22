@@ -1,54 +1,37 @@
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
+/* eslint-disable no-restricted-globals */
+const CACHE_NAME = 'cool-cache';
 
-// 서버 생성
-const server = http.createServer((req, res) => {
-  // 루트 경로로 요청이 들어오면 index.html을 제공
-  if (req.url === '/') {
-    fs.readFile(path.join(__dirname, 'public', 'index.html'), (err, data) => {
-      if (err) {
-        res.writeHead(500);
-        return res.end('Error loading index.html');
-      }
+// Add whichever assets you want to pre-cache here:
+const PRECACHE_ASSETS = [
+    '/assets/',
+    '/src/'
+]
 
-      res.writeHead(200, { 'Content-Type': 'text/html' });
-      res.end(data);
-    });
-  }
+// Listener for the install event - pre-caches our assets list on service worker install.
+self.addEventListener('install', event => {
+    event.waitUntil((async () => {
+        const cache = await caches.open(CACHE_NAME);
+        cache.addAll(PRECACHE_ASSETS);
+    })());
 });
-
-// 서비스 워커 등록
-server.on('request', (req, res) => {
-  if (req.url === '/service-worker.js') {
-    fs.readFile(path.join(__dirname, 'public', 'service-worker.js'), (err, data) => {
-      if (err) {
-        res.writeHead(500);
-        return res.end('Error loading service-worker.js');
-      }
-
-      res.writeHead(200, { 'Content-Type': 'text/javascript' });
-      res.end(data);
-    });
-  }
+self.addEventListener('activate', event => {
+  event.waitUntil(self.clients.claim());
 });
-
-// 정적 파일 제공을 위한 미들웨어
-server.on('request', (req, res) => {
-  const filePath = path.join(__dirname, 'public', req.url);
-  fs.readFile(filePath, (err, data) => {
-    if (err) {
-      res.writeHead(404);
-      return res.end('File not found');
-    }
-
-    res.writeHead(200);
-    res.end(data);
+self.addEventListener('fetch', event => {
+    event.respondWith(async () => {
+        const cache = await caches.open(CACHE_NAME);
+  
+        // match the request to our cache
+        const cachedResponse = await cache.match(event.request);
+  
+        // check if we got a valid response
+        if (cachedResponse !== undefined) {
+            // Cache hit, return the resource
+            return cachedResponse;
+        } else {
+          // Otherwise, go to the network
+            return fetch(event.request)
+        }
+    });
   });
-});
-
-// 서버 시작
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+  
