@@ -19,6 +19,7 @@ root.render(
   navigation={true}
   modules={[Navigation]}
   loop={true}
+  allowTouchMove={false}
   className="mySwiper">
     <SwiperSlide>Slide 1</SwiperSlide>
     <SwiperSlide>Slide 2</SwiperSlide>
