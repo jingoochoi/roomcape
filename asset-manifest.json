@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/roomcape/static/css/main.06cfcfef.css",
+    "main.css": "/roomcape/static/css/main.f4d507c2.css",
     "main.js": "/roomcape/static/js/main.2720b791.js",
     "static/js/453.ec44480f.chunk.js": "/roomcape/static/js/453.ec44480f.chunk.js",
     "index.html": "/roomcape/index.html",
-    "main.06cfcfef.css.map": "/roomcape/static/css/main.06cfcfef.css.map",
+    "main.f4d507c2.css.map": "/roomcape/static/css/main.f4d507c2.css.map",
     "main.2720b791.js.map": "/roomcape/static/js/main.2720b791.js.map",
     "453.ec44480f.chunk.js.map": "/roomcape/static/js/453.ec44480f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.06cfcfef.css",
+    "static/css/main.f4d507c2.css",
     "static/js/main.2720b791.js"
   ]
 }
