@@ -8,7 +8,9 @@
 .up{top: 10%;}
 .down{bottom: 10%;}
 .open{width: 20px;height: 20px;box-shadow:  1px 0 1px rgba(0, 0, 0, 0.5),-1px 0 1px rgba(0, 0, 0, 0.5);border-radius: 50%;top: 50%;position: absolute;left: 50%;transform: translate(-50%,-50%);}
-.wind{font-size: 200px;top: 10%;position: absolute;background-color: white;width: 220px;height: 220px;display: flex;justify-content: center;align-items: center;}
+.wind{font-size: 200px;top: 10%;position: absolute;background-color: white;width: 220px;height: 220px;display: flex;justify-content: center;align-items: center;box-shadow:  1px 0 1px rgba(0, 0, 0, 0.5),-1px 0 1px rgba(0, 0, 0, 0.5);}
+.wind::after{content: '';position: absolute;left: 50%;transform: translateX(-50%);width: 10px;height: 220px;z-index: 3;background-color: white;}
+.wind::before{content: '';position: absolute;top: 50%;transform: translateY(-50%);height: 10px;width: 220px;z-index: 3;background-color: white;}
 /* .wind::after{width: 200px;height: 200px;background-color: white;position: absolute;content: '';top: 50%;left: 50%;transform: translate(-50%,-50%);z-index: 0;} */
 .hole{width: 10%;height: 5%;background-color: black;border-radius: 50% 50% 0 0;top: 75%;position: absolute;}
-.poto{font-size: 100px;border: 10px ridge goldenrod;background-color: white;color: red;top: 30%;position: absolute;width: 150px;height: 150px;}
+.poto{font-size: 100px;border: 10px ridge goldenrod;background-color: white;color: red;top: 23%;position: absolute;width: 150px;height: 150px;display: flex;justify-content: center;align-items: center;}
