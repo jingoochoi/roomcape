@@ -11,4 +11,4 @@
 .wind{font-size: 200px;top: 10%;position: absolute;background-color: white;width: 220px;height: 220px;display: flex;justify-content: center;align-items: center;}
 /* .wind::after{width: 200px;height: 200px;background-color: white;position: absolute;content: '';top: 50%;left: 50%;transform: translate(-50%,-50%);z-index: 0;} */
 .hole{width: 10%;height: 5%;background-color: black;border-radius: 50% 50% 0 0;top: 75%;position: absolute;}
-.poto{font-size: 100px;border: 10px ridge goldenrod;background-color: white;color: red;top: 30%;position: absolute;}
+.poto{font-size: 100px;border: 10px ridge goldenrod;background-color: white;color: red;top: 30%;position: absolute;width: 150px;height: 150px;}
