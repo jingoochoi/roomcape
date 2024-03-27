@@ -17,7 +17,11 @@ import { Room1 } from './module/Room1';
 import { Room2 } from './module/Room2';
 import { Room3 } from './module/Room3';
 import { Room4 } from './module/Room4';
-
+let cod1=Math.floor(Math.random()*90)+10
+let cod2=Math.floor(Math.random()*90)+10
+let coda=[cod1,cod2]
+let code=coda.join('')
+console.log(code)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Swiper
