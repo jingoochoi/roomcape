@@ -17,6 +17,7 @@ import { Room1 } from './module/Room1';
 import { Room2 } from './module/Room2';
 import { Room3 } from './module/Room3';
 import { Room4 } from './module/Room4';
+import { ctxt } from './module/Context';
 let cod1=Math.floor(Math.random()*90)+10
 let cod2=Math.floor(Math.random()*90)+10
 let coda=[cod1,cod2]
@@ -24,6 +25,7 @@ let code=coda.join('')
 console.log(code)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <ctxt.Provider value={{cod1,cod2,code}}>
   <Swiper
   navigation={true}
   modules={[Navigation]}
@@ -34,7 +36,7 @@ root.render(
     <SwiperSlide><Room4/></SwiperSlide>
     <SwiperSlide><Room1/></SwiperSlide>
     <SwiperSlide><Room2/></SwiperSlide>
-  </Swiper>
+  </Swiper></ctxt.Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

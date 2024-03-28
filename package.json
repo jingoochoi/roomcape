@@ -28,16 +28,7 @@
       "react-app",
       "react-app/jest",
       "eslint:recommended"
-    ],
-    "rules": {
-      "no-restricted-globals": [
-        "error",
-        {
-          "name": "self",
-          "message": "Please use 'self' only in service workers"
-        }
-      ]
-    }
+    ]
   },
   "browserslist": {
     "production": [
