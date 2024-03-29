@@ -23,9 +23,10 @@ let cod2=Math.floor(Math.random()*90)+10
 let coda=[cod1,cod2]
 let code=coda.join('')
 console.log(code)
+let keys
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ctxt.Provider value={{cod1,cod2,code}}>
+  <ctxt.Provider value={{cod1,cod2,code,keys}}>
   <Swiper
   navigation={true}
   modules={[Navigation]}
