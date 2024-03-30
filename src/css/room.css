@@ -1,8 +1,8 @@
 .wood{background-image: linear-gradient(to bottom right,#F29661 20%,#CC723D 60%,#F29661);}
-.woodleft{background-image: repeating-linear-gradient(to right,#F29661,#CC723D);}
+.woodleft{background-image: linear-gradient(to right,#F29661,#CC723D 50%,#F29661);}
 .wooddown{background-image: linear-gradient(to bottom,#F29661 20%,#CC723D 60%,#F29661);}
 .door{width: 60%;height: 60%;background-color: #CC723D;position: relative;}
-.hand{width: 30px;height: 30px;background-color: goldenrod;border-radius: 50%;top: 50%;position: absolute;left: 30px;transform: translateY(-50%);box-shadow:  1px 0 1px rgba(0, 0, 0, 0.5),-1px 0 1px rgba(0, 0, 0, 0.5);}
+.hand{width: 30px;height: 30px;background-color: gold;border-radius: 50%;top: 50%;position: absolute;left: 30px;transform: translateY(-50%);box-shadow:  1px 0 1px rgba(0, 0, 0, 0.5),-1px 0 1px rgba(0, 0, 0, 0.5);}
 .draw{width: 60%;height: 40%;background-color: #F29661;top: 50%;position: absolute;box-shadow:  1px 0 1px rgba(0, 0, 0, 0.5),-1px 0 1px rgba(0, 0, 0, 0.5);}
 .pock{width: 80%;height: 33%;box-shadow:  1px 0 1px rgba(0, 0, 0, 0.5),-1px 0 1px rgba(0, 0, 0, 0.5);left: 10%;position: absolute;}
 .up{top: 10%;}
