@@ -21,7 +21,7 @@ export function Room4() {
     return(
         <>
             <div className="bank" style={{position:'absolute',width:'200px',height:'130px',display:'none',zIndex:333,backgroundColor:'white',borderRadius:'30px',lineHeight:7}}>
-                <input type="text" name="text" id="text" onChange={numb}/>
+                <input type="text" name="text" id="text" onChange={numb} placeholder='password'/>
             </div>
             <div className="poto" onClick={pops}>🔑</div>
         </>

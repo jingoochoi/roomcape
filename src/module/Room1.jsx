@@ -12,6 +12,8 @@ export function Room1() {
         } else if ($('.poto').text()==='') {
             // Make sure coco.cod1 is defined and accessible
             // alert('oo')
+            hintElement.textContent = 'YEAH!!';
+            hintElement.style.display = 'block';
             $('#root').fadeOut(1000)
             setTimeout(() => {
                 window.close()
