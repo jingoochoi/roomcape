@@ -1,10 +1,14 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import '../css/room.css'
 import $ from 'jquery'
 import { ctxt } from './Context'
 export function Room3() {
     const codo=useContext(ctxt)
+    useEffect(()=>{
+        $('.swiper-button-prev,.swiper-button-next').hide()
+    })
     const clck=()=>{
+        $('.swiper-button-prev,.swiper-button-next').show()
         $('.bgin').hide()
         $('#root').css({filter:'grayscale(100%) blur(10px)'})
         setTimeout(() => {

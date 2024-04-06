@@ -14,10 +14,10 @@ export function Room1() {
             // alert('oo')
             hintElement.textContent = 'YEAH!!';
             hintElement.style.display = 'block';
-            $('#root').fadeOut(2000)
+            $('#root').fadeOut(1000)
             setTimeout(() => {
                 window.close()
-            }, 2300);
+            }, 1300);
         }
     }
     return(
