@@ -17,7 +17,7 @@ export function Room1() {
             $('#root').css({opacity:0,transition:'2s'})
             setTimeout(() => {
                 window.close()
-            }, 2300);
+            }, 2000);
         }
     }
     return(
